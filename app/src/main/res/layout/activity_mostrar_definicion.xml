@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MostrarDefinicionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/editTxtTitutlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center|top"
+            android:inputType="textMultiLine"
+            android:text="@string/some_title"
+            android:textSize="35sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/viewDefinicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:clickable="false"
+            android:text="@string/labelfor_definicion"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false">
+
+            <TextView
+                android:id="@+id/editTxtDefinicion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="@string/some_text"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonEraseAudio"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_supr"
+                android:focusable="true"
+                android:src="@android:drawable/ic_menu_delete"
+                android:visibility="invisible"
+                app:backgroundTint="@android:color/holo_orange_dark" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonRecordAudio"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_supr"
+                android:focusable="true"
+                android:src="@drawable/record_audio"
+                android:visibility="visible"
+                app:backgroundTint="@color/color_verdeAzulado" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonPauseAudio"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_supr"
+                android:focusable="true"
+                android:src="@android:drawable/ic_media_pause"
+                android:visibility="gone"
+                app:backgroundTint="@color/separator_color" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonResumeAudio"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_supr"
+                android:focusable="true"
+                android:src="@drawable/resume"
+                android:visibility="gone"
+                app:backgroundTint="@color/menu_bar" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonStopAudio"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_supr"
+                android:focusable="true"
+                android:src="@drawable/stop_recording"
+                android:visibility="gone"
+                app:backgroundTint="@color/color_rojo" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/buttonPlayAudio"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_supr"
+                android:focusable="true"
+                android:src="@android:drawable/ic_media_play"
+                android:visibility="gone"
+                app:backgroundTint="@color/color_verdeAzulado" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textRecordStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:textColor="@color/color_verdeAzulado"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/botonFloatanteEliminar"
+                android:layout_width="56dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_supr"
+                android:focusable="true"
+                android:src="@android:drawable/ic_menu_delete" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/botonFloatanteEditar"
+                android:layout_width="56dp"
+                android:layout_height="60dp"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:contentDescription="@string/flotant_button_description_edit"
+                android:focusable="true"
+                android:src="@android:drawable/ic_menu_edit" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

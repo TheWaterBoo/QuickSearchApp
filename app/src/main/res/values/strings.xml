@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">appRecyclerViewV0.1</string>
+    <string name="placeholder_titulo">Titulo:</string>
+    <string name="placeholder_definicion">Contenido…</string>
+    <string name="guardar_registro">Guardar definicion</string>
+    <string name="Nueva_definicion">Nueva definicion</string>
+    <string name="labelfor_definicion">Definicion:</string>
+    <string name="some_title">Some Title</string>
+    <string name="some_text">Some Definition</string>
+    <string name="flotant_button_description_edit">boton edicion</string>
+    <string name="flotant_button_description_supr">boton eliminar</string>
+    <string name="flotant_button_description_add">boton agregar</string>
+    <string name="editar_definicion">Guardar cambios</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="tooltip_edicion_flotante">Editar definicion</string>
+    <string name="tooltip_eliminar_flotante">Eliminar definicion</string>
+    <string name="tooltip_grabar">Grabar nota de audio</string>
+    <string name="tooltip_parar">Detener grabacion</string>
+    <string name="tooltip_Reproducir">Reproducir nota de audio</string>
+    <string name="tooltip_eliminar_audio">Eliminar nota de audio</string>
+    <string name="buscar">Buscar</string>
+    <string name="Acerca_de">Acerca de…</string>
+    <string name="settings">Ajustes</string>
+    <string name="vista_vacia">Por el momento no hay definiciones\nIntenta agregando alguna nueva</string>
+    <string name="not_found">No se encontraron coincidencias</string>
+    <string name="cambiar_tema">Cambiar tema    </string>
+    <string name="play_text">Reproduciendo…</string>
+    <string name="record_text">Grabando…</string>
+    <string name="pause_text">Audio pausado</string>
+    <string name="hint_select_file">Escoja una archivo…</string>
+    <string name="hint_select_path">Eliga una ruta… </string>
+    <string name="filename">Nombre de archivo</string>
+</resources>
