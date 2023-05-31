@@ -176,9 +176,16 @@ public class DBDefiniciones extends DataBaseHelper {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] data = line.split("\\|\\|");
+                String[] data = line.split("\\|");
 
-                if (data.length == 2) {
+                if (data.length == 3) {
+                    String tituloDefinicion = data[0].trim();
+                    String sutbtitle = data[1].trim();  //no se necesita para esta app
+                    String definicion = data[2].trim();
+
+                    // Insertar los datos en la base de datos
+                    insertarDefinicion(tituloDefinicion, definicion);
+                } else if (data.length == 2){
                     String tituloDefinicion = data[0].trim();
                     String definicion = data[1].trim();
 
@@ -209,7 +216,7 @@ public class DBDefiniciones extends DataBaseHelper {
                 String definicion = cursor.getString(1);
 
                 // Escribir los datos en el archivo de texto
-                writer.write(tituloDefinicion + " || " + definicion);
+                writer.write(tituloDefinicion + "||" + definicion + "||");
                 writer.newLine();
             }
             writer.close();
